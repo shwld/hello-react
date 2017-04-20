@@ -17,7 +17,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 document.addEventListener("DOMContentLoaded", function () {
   var mountNode = document.getElementById('app');
-  _reactDom2.default.render(_react2.default.createElement(_Hello2.default, { name: 'shwld' }), mountNode);
+  _reactDom2.default.render(_react2.default.createElement(_Hello2.default, { initialName: 'shwld' }), mountNode);
 });
 
 },{"./components/Hello":2,"react":183,"react-dom":32}],2:[function(require,module,exports){
@@ -51,10 +51,12 @@ var Hello = function (_React$Component) {
   function Hello(props) {
     _classCallCheck(this, Hello);
 
+    var initialName = props.initialName;
+
     var _this = _possibleConstructorReturn(this, (Hello.__proto__ || Object.getPrototypeOf(Hello)).call(this, props));
 
     _this.state = {
-      name: ''
+      name: initialName
     };
     return _this;
   }
@@ -80,14 +82,17 @@ var Hello = function (_React$Component) {
   return Hello;
 }(_react2.default.Component);
 
+// Hello.propTypes = {
+
+// };
+
+exports.default = Hello;
+
 // const Hello = ({ name }) => {
 //   return (
 //       <div>hello {name}</div>
 //     );
 // };
-
-
-exports.default = Hello;
 
 },{"react":183,"react-dom":32}],3:[function(require,module,exports){
 'use strict';

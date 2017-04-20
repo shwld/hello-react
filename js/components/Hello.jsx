@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-export default class Hello extends React.Component {
+class Hello extends React.Component {
   constructor(props) {
+    const { initialName } = props;
     super(props);
     this.state = {
-      name: '',
+      name: initialName,
     };
   }
   render() {
