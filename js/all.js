@@ -5,5 +5,10 @@ import Hello from './components/Hello';
 
 document.addEventListener("DOMContentLoaded", () => {
   const mountNode = document.getElementById('app');
-  ReactDOM.render(<Hello initialName="shwld" />, mountNode);
+  const component = (
+    <Hello initialName="shwld">
+      <p>this is yamagata children</p>
+    </Hello>
+  );
+  ReactDOM.render(component, mountNode);
 });
